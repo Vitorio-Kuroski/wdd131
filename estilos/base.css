@@ -1,0 +1,179 @@
+/* ============================================
+   WDD 131 — Página Inicial
+   Paleta: tinta noturna, dourado e papel
+   ============================================ */
+
+:root {
+  --ink: #1b2430;
+  --ink-soft: #2a3644;
+  --gold: #d9a441;
+  --paper: #f3ecdd;
+  --paper-white: #fbf8f1;
+  --rust: #b05a3a;
+  --sage: #7a8f78;
+  --text: #2a2620;
+
+  --font-display: "Spectral", Georgia, serif;
+  --font-body: "Karla", "Segoe UI", sans-serif;
+
+  --max-width: 46rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- Cabeçalho ---------- */
+
+header {
+  background: var(--ink);
+  color: var(--paper-white);
+  padding: 2.5rem 1.5rem 1.75rem;
+}
+
+header .logo {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1.25rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  text-align: center;
+  margin: 0 0 1.75rem;
+  max-width: 30ch;
+  margin-inline: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--paper);
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+  width: 100%;
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* ---------- Conteúdo principal ---------- */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+main > h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  color: var(--ink);
+  margin: 0 0 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.card {
+  background: var(--paper-white);
+  border: 1px solid rgba(27, 36, 48, 0.12);
+  padding: 1.5rem;
+}
+
+.card h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--rust);
+  margin: 0 0 1rem;
+}
+
+.card img {
+  border: 1px solid rgba(27, 36, 48, 0.12);
+  margin-bottom: 1rem;
+  aspect-ratio: 9 / 7;
+  object-fit: cover;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 40rem) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Rodapé ---------- */
+
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 1.75rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
