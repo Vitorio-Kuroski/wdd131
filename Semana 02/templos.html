@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum do Templo - Vitório Lucas Kuroski</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/templos.css">
+    <link rel="stylesheet" href="estilos/templos-grandes.css">
+    <script src="scripts/templos.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-bar">
+            <p class="brand">Álbum do Templo</p>
+            <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+                <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+        </div>
+        <nav id="site-nav">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="#">Antigo</a></li>
+                <li><a href="#">Novo</a></li>
+                <li><a href="#">Grande</a></li>
+                <li><a href="#">Pequeno</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Álbum de Templos</h1>
+
+        <div class="album-grid">
+            <figure>
+                <img src="imagens/sao-paulo-brasil.jpg" alt="Templo de São Paulo, Brasil" loading="lazy">
+                <figcaption>São Paulo, Brasil</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/curitiba-brasil.jpg" alt="Templo de Curitiba, Brasil" loading="lazy">
+                <figcaption>Curitiba, Brasil</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/recife-brasil.jpg" alt="Templo de Recife, Brasil" loading="lazy">
+                <figcaption>Recife, Brasil</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/manaus-brasil.jpg" alt="Templo de Manaus, Brasil" loading="lazy">
+                <figcaption>Manaus, Brasil</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/fortaleza-brasil.jpg" alt="Templo de Fortaleza, Brasil" loading="lazy">
+                <figcaption>Fortaleza, Brasil</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/porto-alegre-brasil.jpg" alt="Templo de Porto Alegre, Brasil" loading="lazy">
+                <figcaption>Porto Alegre, Brasil</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/brasilia-brasil.jpg" alt="Templo de Brasília, Brasil" loading="lazy">
+                <figcaption>Brasília, Brasil</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/belem-brasil.jpg" alt="Templo de Belém, Brasil" loading="lazy">
+                <figcaption>Belém, Brasil</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/salvador-brasil.jpg" alt="Templo de Salvador, Brasil" loading="lazy">
+                <figcaption>Salvador, Brasil</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> Vitório Lucas Kuroski &middot; Paraná, Brasil</p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+    </footer>
+
+</body>
+</html>
