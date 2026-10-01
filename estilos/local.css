@@ -1,0 +1,97 @@
+:root {
+    --cor-primaria: #1f4d3a;
+    --cor-primaria-texto: #f6f3ea;
+    --cor-destaque: #b3382c;
+    --cor-fundo: #eef2ec;
+    --cor-cartao: #ffffff;
+    --cor-texto: #1d2a24;
+
+    --fonte-titulo: "Fraunces", Georgia, serif;
+    --fonte-corpo: "Nunito Sans", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-primaria-texto);
+    padding: 1.25rem 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    background-color: var(--cor-cartao);
+    margin: 1.25rem 1rem 0;
+    padding: 1.25rem;
+    border-top: 4px solid var(--cor-destaque);
+}
+
+h2 {
+    margin: 0 0 0.75rem;
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
+    color: var(--cor-primaria);
+}
+
+section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+section li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #dfe6dd;
+}
+
+section li:last-child {
+    border-bottom: none;
+}
+
+.icone-clima {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-primaria-texto);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}

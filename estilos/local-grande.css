@@ -1,0 +1,42 @@
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    main {
+        position: relative;
+        padding-bottom: 3rem;
+    }
+
+    .hero img {
+        height: 32rem;
+        object-fit: cover;
+    }
+
+    section {
+        position: absolute;
+        bottom: 5rem;
+        width: 20rem;
+        margin: 0;
+        border-radius: 0.25rem;
+    }
+
+    .dados {
+        left: 2rem;
+        width: 24rem;
+    }
+
+    .clima {
+        right: 2rem;
+    }
+
+    /* O SVG aparece só no mobile; aqui o ícone vem do pseudoelemento */
+    .icone-clima {
+        display: none;
+    }
+
+    .clima h2::after {
+        content: " ⛅";
+    }
+}
