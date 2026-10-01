@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de Templos Filtrado - Vitório Lucas Kuroski</title>
+    <meta name="description" content="Álbum de templos com cartões gerados em JavaScript e filtros por idade e tamanho: antigos, novos, grandes e pequenos.">
+    <meta name="author" content="Vitório Lucas Kuroski">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+    <link rel="stylesheet" href="estilos/templos-filtrados-grandes.css">
+    <script src="scripts/templos-dados.js" defer></script>
+    <script src="scripts/templos-filtrados.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-bar">
+            <p class="brand">Álbum do Templo</p>
+            <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+                <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+        </div>
+        <nav id="site-nav">
+            <ul>
+                <li><a href="#" data-filtro="todos">Página Inicial</a></li>
+                <li><a href="#" data-filtro="antigos">Antigos</a></li>
+                <li><a href="#" data-filtro="novos">Novos</a></li>
+                <li><a href="#" data-filtro="grandes">Grandes</a></li>
+                <li><a href="#" data-filtro="pequenos">Pequenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="titulo-album">Álbum de Templos</h1>
+
+        <div class="album-grid" id="album"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> Vitório Lucas Kuroski &middot; Paraná, Brasil</p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+    </footer>
+
+</body>
+</html>
