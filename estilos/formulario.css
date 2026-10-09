@@ -67,7 +67,7 @@ form,
   border-top: 6px solid var(--dourado);
   border-radius: 0.5rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 14px rgb(27 36 48 / 15%);
+  box-shadow: 0 4px 14px #1b243026;
 }
 
 form {
