@@ -1,0 +1,237 @@
+/* ============================================
+   Curitiba Verde — Planejamento do Site
+   ============================================ */
+
+:root {
+  --floresta: #1f4d3a;
+  --musgo: #8fb07e;
+  --terra: #a3472a;
+  --creme: #f6f3ea;
+  --carvao: #24271f;
+
+  --fonte-titulo: "Bitter", Georgia, serif;
+  --fonte-corpo: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--carvao);
+  font-family: var(--fonte-corpo);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.25;
+}
+
+h2 {
+  color: var(--floresta);
+  border-bottom: 3px solid var(--musgo);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  color: var(--terra);
+}
+
+/* Cabeçalho e rodapé */
+header,
+footer {
+  background: var(--floresta);
+  color: var(--creme);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0.25rem 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.subtitulo {
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Conteúdo */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+.destaque-nome {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--floresta);
+  margin: 0.5rem 0;
+}
+
+/* Paleta de cores */
+.paleta {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.cor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border-left: 6px solid var(--musgo);
+  padding: 0.75rem;
+}
+
+.amostra {
+  flex: 0 0 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid var(--carvao);
+}
+
+.amostra-floresta { background: var(--floresta); }
+.amostra-musgo { background: var(--musgo); }
+.amostra-terra { background: var(--terra); }
+.amostra-creme { background: var(--creme); }
+.amostra-texto { background: var(--carvao); }
+
+.cor-info strong,
+.cor-info code {
+  display: block;
+}
+
+/* Tipografia */
+.fontes {
+  display: grid;
+  gap: 1rem;
+}
+
+.fonte {
+  background: #fff;
+  padding: 0 1rem 1rem;
+  border-top: 4px solid var(--terra);
+}
+
+.exemplo-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--floresta);
+}
+
+.exemplo-corpo {
+  font-size: 1.15rem;
+  border-left: 3px solid var(--musgo);
+  padding-left: 0.75rem;
+}
+
+/* Wireframes */
+.wireframes {
+  display: grid;
+  gap: 2rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.wf {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #fff;
+  border: 3px solid var(--carvao);
+  border-radius: 0.5rem;
+}
+
+.wf-movel {
+  max-width: 20rem;
+}
+
+.bloco {
+  border: 2px dashed var(--floresta);
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.wf-cabecalho,
+.wf-rodape {
+  background: var(--floresta);
+  color: var(--creme);
+  border-style: solid;
+}
+
+.wf-hero {
+  min-height: 7rem;
+  display: grid;
+  place-items: center;
+  background: #e3ebdc;
+}
+
+.wf-card {
+  min-height: 5rem;
+}
+
+.wf-botao {
+  background: var(--terra);
+  color: #fff;
+  border-style: solid;
+  border-color: var(--terra);
+}
+
+/* Telas grandes */
+@media (min-width: 48rem) {
+  .paleta,
+  .fontes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wireframes {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+
+  .wf-grande {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wf-grande .wf-cabecalho,
+  .wf-grande .wf-hero,
+  .wf-grande .wf-texto,
+  .wf-grande .wf-rodape {
+    grid-column: 1 / -1;
+  }
+
+  .wf-grande .wf-hero {
+    min-height: 10rem;
+  }
+}
