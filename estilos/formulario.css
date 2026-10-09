@@ -1,0 +1,264 @@
+/* ============================================
+   Formulário de Avaliação de Produto
+   Paleta: tinta noturna, dourado e papel
+   ============================================ */
+
+:root {
+  --tinta: #1b2430;
+  --dourado: #d9a441;
+  --papel: #f3ecdd;
+  --branco: #fbf8f1;
+  --ferrugem: #a14f31;
+  --texto: #2a2620;
+  --cinza: #8a8478;
+  --estrela: #a87214;
+
+  --fonte-titulo: "Spectral", Georgia, serif;
+  --fonte-corpo: "Karla", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--texto);
+  font-family: var(--fonte-corpo);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+header,
+footer {
+  background: var(--tinta);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1,
+h2 {
+  font-family: var(--fonte-titulo);
+  margin: 0;
+}
+
+header h1 {
+  border-bottom: 3px solid var(--dourado);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+main {
+  padding: 1.5rem 1rem;
+}
+
+/* Cartão do formulário e da confirmação */
+form,
+.confirmacao {
+  max-width: 32rem;
+  margin: 0 auto;
+  background: var(--branco);
+  border-top: 6px solid var(--dourado);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgb(27 36 48 / 15%);
+}
+
+form {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.aviso {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.obrigatorio {
+  color: var(--ferrugem);
+}
+
+form > label,
+legend {
+  font-weight: 700;
+  margin-top: 0.8rem;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  font: inherit;
+  color: var(--texto);
+  background: #fff;
+  border: 1px solid var(--cinza);
+  border-radius: 0.35rem;
+}
+
+select:focus,
+input:focus-visible,
+textarea:focus {
+  outline: 3px solid var(--tinta);
+  outline-offset: 2px;
+}
+
+/* Campos obrigatórios preenchidos corretamente */
+select:valid,
+input[type="date"]:valid {
+  border-left: 6px solid #4e7a3a;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+  margin-bottom: 0.4rem;
+}
+
+legend small {
+  font-weight: 400;
+}
+
+/* Estrelas da classificação */
+.estrelas {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.estrelas input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.estrelas label {
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--cinza);
+  cursor: pointer;
+}
+
+.estrelas label::before {
+  content: "☆";
+}
+
+/* Preenche a estrela marcada e todas antes dela */
+.estrelas label:has(~ input:checked),
+.estrelas input:checked + label,
+.estrelas label:hover,
+.estrelas label:has(~ label:hover) {
+  color: var(--estrela);
+}
+
+.estrelas label:has(~ input:checked)::before,
+.estrelas input:checked + label::before,
+.estrelas label:hover::before,
+.estrelas label:has(~ label:hover)::before {
+  content: "★";
+}
+
+.estrelas:hover label:hover ~ label {
+  color: var(--cinza);
+}
+
+.estrelas:hover label:hover ~ label::before {
+  content: "☆";
+}
+
+.estrelas input:focus-visible + label {
+  outline: 3px solid var(--tinta);
+  outline-offset: 2px;
+  border-radius: 0.2rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Recursos úteis */
+.recursos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 0.6rem;
+  align-items: center;
+}
+
+.recursos input {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--tinta);
+  margin: 0;
+}
+
+/* Botões */
+input[type="submit"],
+.botao {
+  margin-top: 1.2rem;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--branco);
+  background: var(--tinta);
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+input[type="submit"]:hover,
+.botao:hover {
+  background: var(--ferrugem);
+}
+
+/* Página de confirmação */
+.confirmacao {
+  display: grid;
+  text-align: center;
+}
+
+#resumo:empty {
+  display: none;
+}
+
+.contador {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--tinta);
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  main {
+    padding: 3rem 1rem;
+  }
+
+  .recursos {
+    grid-template-columns: auto 1fr auto 1fr;
+  }
+}

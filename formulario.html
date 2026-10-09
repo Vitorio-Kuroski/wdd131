@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Produto - Vitorio Lucas Kuroski</title>
+  <meta name="description" content="Formulário de avaliação de produto: escolha o produto, dê uma nota de 1 a 5 estrelas, informe a data de instalação e conte o que achou.">
+  <meta name="author" content="Vitorio Lucas Kuroski">
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/formulario.css">
+  <script src="scripts/produtos.js" defer></script>
+  <script src="scripts/formulario.js" defer></script>
+  <script src="scripts/obterdatas.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Avaliação de Produto</h1>
+  </header>
+
+  <main>
+    <form action="avaliacao.html" method="get">
+
+      <p class="aviso">Campos marcados com <span class="obrigatorio">*</span> são obrigatórios.</p>
+
+      <label for="produto">Nome do Produto <span class="obrigatorio">*</span></label>
+      <select id="produto" name="produto" required>
+        <option value="" disabled selected>Selecione um Produto...</option>
+      </select>
+
+      <fieldset class="estrelas">
+        <legend>Classificação Geral <span class="obrigatorio">*</span></legend>
+        <input type="radio" id="nota1" name="nota" value="1" required>
+        <label for="nota1"><span class="sr-only">1 estrela</span></label>
+        <input type="radio" id="nota2" name="nota" value="2" required>
+        <label for="nota2"><span class="sr-only">2 estrelas</span></label>
+        <input type="radio" id="nota3" name="nota" value="3" required>
+        <label for="nota3"><span class="sr-only">3 estrelas</span></label>
+        <input type="radio" id="nota4" name="nota" value="4" required>
+        <label for="nota4"><span class="sr-only">4 estrelas</span></label>
+        <input type="radio" id="nota5" name="nota" value="5" required>
+        <label for="nota5"><span class="sr-only">5 estrelas</span></label>
+      </fieldset>
+
+      <label for="data-instalacao">Data de Instalação <span class="obrigatorio">*</span></label>
+      <input type="date" id="data-instalacao" name="dataInstalacao" required>
+
+      <fieldset class="recursos">
+        <legend>Recursos Úteis <small>(marque todos que se aplicam)</small></legend>
+        <input type="checkbox" id="durabilidade" name="recursos" value="durabilidade">
+        <label for="durabilidade">Durabilidade</label>
+        <input type="checkbox" id="facilidade" name="recursos" value="facilidade-de-uso">
+        <label for="facilidade">Facilidade de uso</label>
+        <input type="checkbox" id="desempenho" name="recursos" value="desempenho">
+        <label for="desempenho">Desempenho</label>
+        <input type="checkbox" id="design" name="recursos" value="design">
+        <label for="design">Design</label>
+      </fieldset>
+
+      <label for="avaliacao-escrita">Avaliação Escrita</label>
+      <textarea id="avaliacao-escrita" name="avaliacaoEscrita" rows="5" placeholder="Conte o que você achou do produto..."></textarea>
+
+      <label for="nome-usuario">Nome de Usuário</label>
+      <input type="text" id="nome-usuario" name="nomeUsuario" autocomplete="name">
+
+      <input type="submit" value="Enviar Avaliação">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="anoatual"></span> Vitorio Lucas Kuroski · Paraná, Brasil</p>
+    <p id="ultimaModificacao"></p>
+  </footer>
+
+</body>
+</html>
