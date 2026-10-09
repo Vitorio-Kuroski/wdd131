@@ -1,15 +1,15 @@
 /* ============================================
-   Curitiba Verde — Planejamento do Site
+   Raízes Kuroski — Planejamento do Site
    ============================================ */
 
 :root {
-  --floresta: #1f4d3a;
-  --musgo: #8fb07e;
-  --terra: #a3472a;
-  --creme: #f6f3ea;
-  --carvao: #24271f;
+  --nogueira: #4a3426;
+  --oliva: #556b2f;
+  --dourado: #c49a4a;
+  --pergaminho: #f5eedf;
+  --tinta: #2b241e;
 
-  --fonte-titulo: "Bitter", Georgia, serif;
+  --fonte-titulo: "Playfair Display", Georgia, serif;
   --fonte-corpo: "Source Sans 3", "Segoe UI", sans-serif;
 }
 
@@ -19,8 +19,8 @@
 
 body {
   margin: 0;
-  background: var(--creme);
-  color: var(--carvao);
+  background: var(--pergaminho);
+  color: var(--tinta);
   font-family: var(--fonte-corpo);
   font-size: 1.05rem;
   line-height: 1.6;
@@ -34,20 +34,20 @@ h3 {
 }
 
 h2 {
-  color: var(--floresta);
-  border-bottom: 3px solid var(--musgo);
+  color: var(--nogueira);
+  border-bottom: 3px solid var(--dourado);
   padding-bottom: 0.3rem;
 }
 
 h3 {
-  color: var(--terra);
+  color: var(--oliva);
 }
 
 /* Cabeçalho e rodapé */
 header,
 footer {
-  background: var(--floresta);
-  color: var(--creme);
+  background: var(--nogueira);
+  color: var(--pergaminho);
   text-align: center;
   padding: 1.5rem 1rem;
 }
@@ -84,7 +84,7 @@ section {
   font-family: var(--fonte-titulo);
   font-size: 2rem;
   font-weight: 700;
-  color: var(--floresta);
+  color: var(--nogueira);
   margin: 0.5rem 0;
 }
 
@@ -101,7 +101,7 @@ section {
   align-items: center;
   gap: 1rem;
   background: #fff;
-  border-left: 6px solid var(--musgo);
+  border-left: 6px solid var(--dourado);
   padding: 0.75rem;
 }
 
@@ -109,14 +109,14 @@ section {
   flex: 0 0 4rem;
   height: 4rem;
   border-radius: 50%;
-  border: 1px solid var(--carvao);
+  border: 1px solid var(--tinta);
 }
 
-.amostra-floresta { background: var(--floresta); }
-.amostra-musgo { background: var(--musgo); }
-.amostra-terra { background: var(--terra); }
-.amostra-creme { background: var(--creme); }
-.amostra-texto { background: var(--carvao); }
+.amostra-nogueira { background: var(--nogueira); }
+.amostra-oliva { background: var(--oliva); }
+.amostra-dourado { background: var(--dourado); }
+.amostra-pergaminho { background: var(--pergaminho); }
+.amostra-tinta { background: var(--tinta); }
 
 .cor-info strong,
 .cor-info code {
@@ -132,19 +132,19 @@ section {
 .fonte {
   background: #fff;
   padding: 0 1rem 1rem;
-  border-top: 4px solid var(--terra);
+  border-top: 4px solid var(--oliva);
 }
 
 .exemplo-titulo {
   font-family: var(--fonte-titulo);
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--floresta);
+  color: var(--nogueira);
 }
 
 .exemplo-corpo {
   font-size: 1.15rem;
-  border-left: 3px solid var(--musgo);
+  border-left: 3px solid var(--dourado);
   padding-left: 0.75rem;
 }
 
@@ -168,7 +168,7 @@ figcaption {
   gap: 0.5rem;
   padding: 0.75rem;
   background: #fff;
-  border: 3px solid var(--carvao);
+  border: 3px solid var(--tinta);
   border-radius: 0.5rem;
 }
 
@@ -177,7 +177,7 @@ figcaption {
 }
 
 .bloco {
-  border: 2px dashed var(--floresta);
+  border: 2px dashed var(--nogueira);
   padding: 0.75rem;
   text-align: center;
   font-size: 0.9rem;
@@ -185,8 +185,8 @@ figcaption {
 
 .wf-cabecalho,
 .wf-rodape {
-  background: var(--floresta);
-  color: var(--creme);
+  background: var(--nogueira);
+  color: var(--pergaminho);
   border-style: solid;
 }
 
@@ -194,7 +194,7 @@ figcaption {
   min-height: 7rem;
   display: grid;
   place-items: center;
-  background: #e3ebdc;
+  background: #efe4cc;
 }
 
 .wf-card {
@@ -202,10 +202,10 @@ figcaption {
 }
 
 .wf-botao {
-  background: var(--terra);
+  background: var(--oliva);
   color: #fff;
   border-style: solid;
-  border-color: var(--terra);
+  border-color: var(--oliva);
 }
 
 /* Telas grandes */
